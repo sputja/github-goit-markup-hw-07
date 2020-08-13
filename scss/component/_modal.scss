@@ -1,25 +1,27 @@
 /* модальное окно */
-.backdrop,
+// .backdrop,
 .form--send {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  @extend %flex--alignment;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
-.modal-form,
+// .modal-form,
 .user--form {
   position: relative;
   width: 528px;
-  display: flex;
+  // display: flex;
+  // text-align: center;
+  @extend %flex--align-items;
   flex-direction: column;
-  text-align: center;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -79,48 +81,49 @@
   -webkit-text-fill-color: $title--dark;
   color: $title--dark;
   background-color: #ffffff;
-}
+// }
 
-.user--form-inptu:hover,
-.user--form-inptu:focus {
+&:hover,
+&:focus {
   border: 1px solid $accent--color;
   fill: $accent--color;
 }
 
-.user--form-inptu:hover + .user--name-svg,
-.user--form-inptu:focus + .user--name-svg,
-.user--form-inptu:hover + .user--tel-svg,
-.user--form-inptu:focus + .user--tel-svg,
-.user--form-inptu:hover + .user--email-svg,
-.user--form-inptu:focus + .user--email-svg {
+&:hover + .user--name-svg,
+&:focus + .user--name-svg,
+&:hover + .user--tel-svg,
+&:focus + .user--tel-svg,
+&:hover + .user--email-svg,
+&:focus + .user--email-svg {
   fill: $accent--color;
 }
 
-.user--form-inptu:hover + .user--name-svg + .user--name-label,
-.user--form-inptu:focus + .user--name-svg + .user--name-label,
-.user--form-inptu:hover + .user--tel-svg + .user--tel-label,
-.user--form-inptu:focus + .user--tel-svg + .user--tel-label,
-.user--form-inptu:hover + .user--email-svg + .user--email-label,
-.user--form-inptu:focus + .user--email-svg + .user--email-label,
-.user--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-.user--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-.user--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-.user--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-.user--form-inptu:not(:placeholder-shown)
+&:hover + .user--name-svg + .user--name-label,
+&:focus + .user--name-svg + .user--name-label,
+&:hover + .user--tel-svg + .user--tel-label,
+&:focus + .user--tel-svg + .user--tel-label,
+&:hover + .user--email-svg + .user--email-label,
+&:focus + .user--email-svg + .user--email-label,
+&:not(:placeholder-shown) + .user--name-svg + .user--name-label,
+&:not(:placeholder-shown) + .user--name-svg + .user--name-label,
+&:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
+&:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
+&:not(:placeholder-shown)
   + .user--email-svg
   + .user--email-label,
-.user--form-inptu:not(:placeholder-shown)
+&:not(:placeholder-shown)
   + .user--email-svg
   + .user--email-label {
   margin-top: -33px;
   margin-left: 0;
   color: $accent--color;
 }
+}
 
 .user--name-svg {
   position: absolute;
   top: 14px;
-  left: 59px;
+  left: 16px;
   fill: $btn--dark;
 }
 
@@ -128,21 +131,21 @@
 .user--email-svg {
   position: absolute;
   top: 11px;
-  left: 56px;
+  left: 16px;
 }
 
 .user--name-label {
   position: absolute;
   top: 14px;
-  left: 59px;
-  margin-left: 22px;
+  left: 16px;
+  margin-left: 25px;
 }
 
 .user--tel-label,
 .user--email-label {
   position: absolute;
   top: 11px;
-  left: 56px;
+  left: 16px;
   margin-left: 25px;
 }
 
@@ -151,7 +154,7 @@
   height: 120px;
   outline: none;
   resize: none;
-  margin-left: 40px;
+  // margin-left: 40px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
@@ -161,17 +164,17 @@
   border-radius: 4px;
   color: $title--dark;
   background-color: #ffffff;
-}
 
-.user--form-textarea:hover {
+&:hover {
   border: 1px solid $accent--color;
 }
-
+}
 .user--form-label {
-  display: flex;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  @extend %flex--alignment;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   margin-top: 30px;
   font-size: 14px;
   line-height: 1.71;
@@ -188,6 +191,11 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  &:checked + .user--form-label--checkbox {
+    border: 0.2px solid #ffffff;
+    background-color: $accent--color;
+  }
 }
 
 .user--form-label--checkbox {
@@ -199,13 +207,10 @@
   border: 2px solid $btn--dark;
 }
 
-.user--form-hidden:checked + .user--form-label--checkbox {
-  border: 0.2px solid #ffffff;
-  background-color: $accent--color;
-}
+
 
 .user--form-label--svg {
   position: absolute;
   top: 8px;
-  left: 54px;
+  left: 2px;
 }

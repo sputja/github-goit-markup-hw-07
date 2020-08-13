@@ -338,10 +338,15 @@ template {
   display: none;
 }
 
-.nav {
+.form--send, .user--form-label, .nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.user--form {
+  display: flex;
+  align-items: center;
 }
 
 html {
@@ -400,27 +405,20 @@ a {
 }
 
 /* модальное окно */
-.backdrop,
 .form--send {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
-.modal-form,
 .user--form {
   position: relative;
   width: 528px;
-  display: flex;
   flex-direction: column;
-  text-align: center;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -481,8 +479,7 @@ a {
   background-color: #ffffff;
 }
 
-.user--form-inptu:hover,
-.user--form-inptu:focus {
+.user--form-inptu:hover, .user--form-inptu:focus {
   border: 1px solid #2196f3;
   fill: #2196f3;
 }
@@ -516,7 +513,7 @@ a {
 .user--name-svg {
   position: absolute;
   top: 14px;
-  left: 59px;
+  left: 16px;
   fill: #212121;
 }
 
@@ -524,21 +521,21 @@ a {
 .user--email-svg {
   position: absolute;
   top: 11px;
-  left: 56px;
+  left: 16px;
 }
 
 .user--name-label {
   position: absolute;
   top: 14px;
-  left: 59px;
-  margin-left: 22px;
+  left: 16px;
+  margin-left: 25px;
 }
 
 .user--tel-label,
 .user--email-label {
   position: absolute;
   top: 11px;
-  left: 56px;
+  left: 16px;
   margin-left: 25px;
 }
 
@@ -547,7 +544,6 @@ a {
   height: 120px;
   outline: none;
   resize: none;
-  margin-left: 40px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
@@ -564,10 +560,7 @@ a {
 }
 
 .user--form-label {
-  display: flex;
   position: relative;
-  justify-content: center;
-  align-items: center;
   margin-top: 30px;
   font-size: 14px;
   line-height: 1.71;
@@ -586,6 +579,11 @@ a {
   overflow: hidden;
 }
 
+.user--form-hidden:checked + .user--form-label--checkbox {
+  border: 0.2px solid #ffffff;
+  background-color: #2196f3;
+}
+
 .user--form-label--checkbox {
   display: inline-block;
   margin-right: 8px;
@@ -595,15 +593,10 @@ a {
   border: 2px solid #212121;
 }
 
-.user--form-hidden:checked + .user--form-label--checkbox {
-  border: 0.2px solid #ffffff;
-  background-color: #2196f3;
-}
-
 .user--form-label--svg {
   position: absolute;
   top: 8px;
-  left: 54px;
+  left: 2px;
 }
 
 .user--form-btn {
