@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--text--dark-color);
+}
+
+ul {
+  list-style: none;
+}
+.img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}

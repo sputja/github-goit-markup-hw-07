@@ -1,0 +1,85 @@
+/* Портфолио -Каталог Работ */
+.container .portfolio {
+  margin-top: 93px;
+}
+
+.work--catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.h2 {
+  margin: 0;
+}
+.work--catalog-item {
+  width: calc((100% - 60px) / 3);
+  height: 404px;
+  margin-right: 30px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.work--catalog-item:hover,
+.work--catalog-item:focus {
+  box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  background: $text--light;
+  overflow: hidden;
+}
+
+.work--catalog-item:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.work--catalog-layer {
+  position: relative;
+  width: 370px;
+  overflow: hidden;
+}
+.work--catalog-style {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 1.56;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 63px;
+  padding-bottom: 63px;
+
+  @include color($title--lite);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+}
+
+.work--catalog-item:hover .work--catalog-style,
+.work--catalog-link:focus .work--catalog-style {
+  top: 0;
+  transform: translateY(0%);
+}
+
+.work--catalog-paragraph {
+  width: 370px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.work--catalog-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  @include color($title--dark);
+}
+
+.work--catalog-text {
+  font-size: 16px;
+  line-height: 1.88;
+  margin-top: 4px;
+  @include color($text--dark);
+}

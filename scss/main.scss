@@ -1,0 +1,37 @@
+@import "./utils/normalise";
+@import "./utils/variables";
+@import "./utils/placeholders;
+// @import " ./ @import "./utils/mixins";
+@import "./base/base";
+@import "./base/base";
+@import "./base/base";
+@import "./base/base";
+@import "./base/base";
+
+@import "./utils/placeholders";
+@import "./utils/mixins";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/about";
+@import "./layout/services";
+@import "./layout/why-are-we";
+@import "./layout/masters";
+@import "./layout/gallery";
+@import "./layout/contact-form";
+@import "./layout/contact";
+@import "./layout/footer";
+
+:root {
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --title--dark-color: #212121;
+  --title--light-color: #ffffff;
+  --btn--dark-color: #212121;
+  --btn--accent-color: #2196f3;
+  --btn--light-color: #ffffff;
+  --text--dark-color: #757575;
+  --text--light-color: #ffffff;
+  --accent--color: #2196f3;
+  --accent--color-rgba: rgba(33, 150, 243, 0.9);
+}

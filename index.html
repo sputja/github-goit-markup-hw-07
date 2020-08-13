@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title lang="en">WebStudio</title>
+	<link rel="stylesheet" href="./css/normalise.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!--Шапка -->
+	<header>
+		<div  class="container">
+			<nav class="nav">
+			<!-- Логотип кампании -->
+			<a class="logotip" lang="en" href="./index.html"><span class="logotip--text" >Web</span> Studio</a>
+			<ul class="nav--list">
+				<li class="nav--item">
+					<a class="nav--link animation nav--link-active" href="./index.html">Студия</a>
+				</li>
+				<li class="nav--item">
+					<a class="nav--link animation" href="./portfolio.html">Портфолио</a>
+				</li>
+				<li class="nav--item">
+					<a class="nav--link animation" href=./index.html>Контакты</a>
+				</li>
+			</ul>
+				<ul class="nav--contact">
+					<li class="nav--item1">
+						<a class="nav--link1 animation " href="mailto:info@devstudio.com">
+							<svg class="nav--item1-svg animation" width= "16px" height="11px">
+								<use  href="./img/sprite.svg#email"></use>
+							</svg>
+							info@devstudio.com
+						</a>
+					</li>
+					<li  class="nav--item1">
+						<a class="nav--link1 animation " href="tel:+380961111111">
+							<svg class="nav--item1-svg animation" width= "10px" height="15px">
+								<use  href="./img/sprite.svg#tel"></use>
+							</svg>
+							+38 096 111 11 11
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+		<!-- Hero -->
+		<div class="hero" >
+			<div class="container">
+					<h1 class="title--h1" >Эффективные решения <br>  для вашего бизнеса</h1>
+				<button data-modal-open class="button" type="button">Заказать услугу</button>
+			</div>
+		</div>
+	<main>
+		<!-- Приимущества -->
+		<div class="container">
+		<section class="about">
+				<h2 hidden> О компании </h2>
+				<ul class="about--list">
+					<li class="about--item">
+							<svg class="about--img-svg">
+								<use href="./img/sprite.svg#satelite"></use>
+							</svg>
+						<h3 class="about--title">Внимание к деталям</h3>
+						<p class="about--text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+					</li>
+					<li class="about--item">
+							<svg class="about--img-svg">
+								<use href="./img/sprite.svg#clock"></use>
+							</svg>
+						<h3 class="about--title" >Пунктуальность</h3>
+						<p class="about--text"> Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+					</li>
+					<li class="about--item">
+							<svg class="about--img-svg">
+								<use href="./img/sprite.svg#plan"></use>
+							</svg>
+						<h3 class="about--title" >Планирование</h3>
+						<p class="about--text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+					</li>
+					<li class="about--item">
+							<svg class="about--img-svg">
+								<use href="./img/sprite.svg#cosmonaut"></use>
+							</svg>
+						<h3 class="about--title" >Современные технологии</h3>
+						<p class="about--text">Значимость этих проблем настолько очевидна, что реализация плановых заданий..</p>
+					</li>
+				</ul>
+		</section>
+		</div>
+		<!-- Разработки -->
+		<section class="work">
+			<div class="container">
+				<h2 class="title--h2">Чем мы занимаемся</h2>
+				<ul class="work--list ">
+					<li class="work--item">
+						<a href="" target="_blank" ><img class="work--img img" src="./img/biznes/descktop.jpg" alt="Десктопные приложения" width="370" height="294"></a>
+							<h3 class="work--title">Десктопные приложения</h3>
+					</li>
+					<li class="work--item">
+						<a href="" target="_blank" ><img class="work--img img" src="./img/biznes/mobilca.jpg" alt="Мобильные приложения" width="370" height="294"></a>
+						<h3 class="work--title">Мобильные приложения</h3>
+					</li>
+					<li class="work--item">
+						<a href="" target="_blank" ><img class="work--img img" src="./img/biznes/designed.jpg" alt="Дизайнерские решения" width="370" height="294"></a>
+						<h3 class="work--title">Дизайнерские решения</h3>
+					</li>
+				</ul>
+			</div>
+				</section>
+		<!-- Команда разработчиков -->
+		<section class="command">
+			<div class="container">
+				<h2 class="title--h2">Наша команда</h2>
+				<ul class="command--list">
+					<li class="command--item">
+						<img class="command--img-name img" src="./img/comand/img.jpg" alt="Николай Кучеренко" width="270" height="260">
+						<h3 class="command--title" >Николай Кучеренко</h3>
+						<p class="command--text" lang="en">Product Designer</p>
+						<ul class="command--soshial">
+							<li class="command--soshial-item">
+                <a class="command--soshial-link animation" href="" aria-label="Ссылка на Instagram">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Facebook">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Twitter">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+                <a class="command--soshial-link animation" href="" aria-label="Ссылка на LinkedIn">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#linkedIn"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="command--item">
+						<img class="command--img-name img" src="./img/comand/img-1.jpg" alt="Ольга Иванова" width="270" height="260">
+						<h3 class="command--title" >Ольга Иванова</h3>
+						<p class="command--text" lang="en">Frontend Developer</p>
+						<ul class="command--soshial">
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Instagram">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Facebook">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Twitter">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на LinkedIn">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#linkedIn"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="command--item">
+						<img class="command--img-name img" src="./img/comand/img-2.jpg" alt="Андрей Шевченко" width="270" height="260">
+						<h3 class="command--title">Андрей Шевченко</h3>
+						<p class="command--text" lang="en">Marketing</p>
+						<ul class="command--soshial">
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Instagram">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Facebook">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Twitter">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+                <a class="command--soshial-link animation" href="" aria-label="Ссылка на LinkedIn">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#linkedIn"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="command--item">
+						<img class="command--img-name img" src="./img/comand/img-3.jpg" alt="Иван Николаев" width="270" height="260">
+						<h3 class="command--title" >Иван Николаев</h3>
+						<p class="command--text" lang="en">UI Designer</p>
+						<ul class="command--soshial">
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Instagram">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Facebook">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+								<a class="command--soshial-link animation" href="" aria-label="Ссылка на Twitter">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="command--soshial-item">
+                <a class="command--soshial-link animation" href="" aria-label="Ссылка на LinkedIn">
+									<svg class="command--soshial-svg animation">
+										<use href="./img/sprite.svg#linkedIn"></use>
+									</svg>
+								</a>
+
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+		<!-- Клиенты компании -->
+		<div class="container">
+		<section class="customers">
+				<h2 class="title--h2">Постоянные клиенты</h2>
+				<ul class="customers--list">
+					<li class="customers--item">
+						<a class="customers--link animation" href="" aria-label="Ссылка на Клиент1">
+							<svg class="customers--svg animation" width="44" height="49">
+								<use href="./img/sprite.svg#client1"></use>
+							</svg>
+						</a>
+						</li>
+					<li class="customers--item">
+						<a class="customers--link animation" href="" aria-label="Ссылка на Клиент2">
+							<svg class="customers--svg animation" width="40" height="52">
+								<use href="./img/sprite.svg#client2"></use>
+							</svg>
+						</a>
+						</li>
+					<li class="customers--item">
+						<a class="customers--link animation" href="" aria-label="Ссылка на Клиент3">
+							<svg class="customers--svg animation" width="41" height="43">
+								<use href="./img/sprite.svg#client3"></use>
+							</svg>
+						</a>
+						</li>
+					<li class="customers--item">
+						<a class="customers--link animation" href="" aria-label="Ссылка на Клиент4">
+							<svg class="customers--svg animation" width="80" height="42">
+								<use href="./img/sprite.svg#client4"></use>
+							</svg>
+						</a>
+						</li>
+					<li class="customers--item">
+						<a class="customers--link animation" href="" aria-label="Ссылка на Клиент5">
+							<svg class="customers--svg animation" width="59" height="47">
+								<use href="./img/sprite.svg#client5"></use>
+							</svg>
+						</a>
+						</li>
+					<li class="customers--item">
+						<a class="customers--link animation" href="" aria-label="Ссылка на Клиент6">
+							<svg class="customers--svg animation" width="88" height="45">
+								<use href="./img/sprite.svg#client6"></use>
+							</svg>
+						</a>
+						</li>
+				</ul>
+		</section>
+	</div>
+	</main>
+	<!-- Координаты и обратная связь -->
+	<footer class="coordinates">
+		<div class="container">
+		<!-- Логотип кампании -->
+		<ul class="coordinates--list">
+			<li class="coordinates--item">
+				<a class="logotip" lang="en" href="./index.html"><span class="logotip--text">Web</span> Studio</a>
+				<address class="address"> <span class="address--city">г. Киев, пр-т Леси Украинки, 26</span><br>
+					info@example.com <br>
+					+38 099 111 11 11
+				</address>
+			</li>
+			<li class="coordinates--item1">
+				<b class="coordinates--text">Присоединяйтесь</b>
+				<ul class="coordinates--list1">
+					<li class="command--soshial-item">
+            <a class="command--soshial-link animation" href="" aria-label="Ссылка на Instagram">
+							<svg class="command--soshial-svg">
+								<use href="./img/sprite.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="command--soshial-item">
+						<a class="command--soshial-link animation" href="" aria-label="Ссылка на Facebook">
+							<svg class="command--soshial-svg">
+								<use href="./img/sprite.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="command--soshial-item">
+						<a class="command--soshial-link animation" href="" aria-label="Ссылка на Twitter">
+							<svg class="command--soshial-svg">
+								<use href="./img/sprite.svg#twitter"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="command--soshial-item">
+            <a class="command--soshial-link animation" href="" aria-label="Ссылка на LinkedIn">
+							<svg class="command--soshial-svg">
+								<use href="./img/sprite.svg#linkedIn"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="coordinates--item2">
+        <form action="#" >
+          <b class="coordinates--text">Подпишитесь на рассылку</b>
+          <ul class="coordinates--subscription">
+            <li>
+              <input class="coordinates--email" type="email"  placeholder="E-mail" name="email" />
+            </li>
+            <li>
+              <button class="coordinates--buttom" type="submit"> Подписаться
+                <svg class="coordinates--buttom-svg">
+                  <use  href="./img/sprite.svg#send"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </form>
+      </li>
+		</ul>
+		</div>
+	</footer>
+<!--  модальное окно  -->
+<div data-modal class="form--send is-hidden animation">
+  <form class="user--form" action="#">
+    <button data-modal-close type="button" class="btn--modal-close animation">
+      <svg class="form--send-svg animation" width="11" height="11" >
+        <use href="./img/sprite.svg#close"></use>
+      </svg>
+      </button>
+    <h2 class="user--form-h2">Оставьте свои данные, мы вам перезвоним</h2>
+    <div class="user--form-name">
+      <input type="text" name="user--name" class="user--form-inptu animation" id="user--name" placeholder=" " required>
+      <svg class="user--name-svg animation" width="12" height="12" >
+        <use href="./img/sprite.svg#fname"></use>
+      </svg>
+      <label class="user--name-label animation" for="user--name">Имя</label>
+    </div>
+    <div class="user--form-tel">
+      <input type="tel" name="user--tel" class="user--form-inptu animation" id="user--tel" placeholder=" " required>
+      <svg class="user--tel-svg animation" width="13" height="13" >
+        <use href="./img/sprite.svg#ftel"></use>
+      </svg>
+      <label class="user--tel-label animation" for="user--tel">Телефон</label>
+    </div>
+    <div class="user--form-email">
+      <input type="email" name="user--email" class="user--form-inptu animation" id="user--email" placeholder=" " required>
+      <svg class="user--email-svg animation" width="13" height="13" >
+        <use href="./img/sprite.svg#femail"></use>
+      </svg>
+      <label class="user--email-label animation" for="user--email">Почта</label>
+    </div>
+    <textarea name="text" class="user--form-textarea animation" placeholder="Комментарий"></textarea>
+    <label class="user--form-label animation">
+      <input type="checkbox" name="polisy" value="accept-polisy" class="user--form-hidden  user--checkbox animation">
+      <span class="user--form-label--checkbox"></span>
+      <svg class="user--form-label--svg animation" width="11" height="8" >
+        <use href="./img/sprite.svg#checkgal"></use>
+      </svg>
+      <span class="user--form-label--span">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></span>
+    </label>
+    <button type="submit" class="user--form-btn">Отправить</button>
+  </form>
+</div>
+<script src="./js/modal.js"></script>
+</body>
+
+</html>

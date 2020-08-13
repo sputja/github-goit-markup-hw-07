@@ -1,0 +1,90 @@
+/* Команда разработчиков */
+.command {
+  height: 702px;
+  align-items: center;
+  margin-top: 94px;
+  padding-top: 94px;
+  background-image: linear-gradient(#f5f4fa, #f5f4fa);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px auto;
+}
+.container .command {
+  margin-top: 94px;
+}
+
+.command--list {
+  display: flex;
+  margin-bottom: 94px;
+}
+
+.command--item {
+  margin-right: 30px;
+  margin-top: 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.command--item:last-child {
+  padding: 0;
+}
+
+.command--title {
+  margin: 0;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  @include color($title--dark);
+}
+
+.command--text {
+  font-size: 16px;
+  line-height: 1.19;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+  @include color($text--dark);
+}
+
+.command--soshial {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.command--soshial-item {
+  margin-left: 10px;
+  background: #ffffff;
+}
+
+.command--soshial-item:first-child {
+  margin-left: 0px;
+}
+
+.command--soshial-svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.command--soshial-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.command--soshial-link:hover,
+.command--soshial-link:focus {
+  background-color: $accent--color;
+}
+
+.command--soshial-link:hover .command--soshial-svg,
+.command--soshial-link:focus .command--soshial-svg {
+  fill: #ffffff;
+}
