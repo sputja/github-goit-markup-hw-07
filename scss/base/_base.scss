@@ -11,10 +11,10 @@ html {
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: $main-font;
   font-size: 14px;
   letter-spacing: 0.03em;
-  color: var(--text--dark-color);
+  color: $text--dark;
 }
 
 ul {

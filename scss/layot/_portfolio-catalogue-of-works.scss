@@ -22,7 +22,8 @@
 
 .work--catalog-item:hover,
 .work--catalog-item:focus {
-  box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
   background: $text--light;
   overflow: hidden;
 }
@@ -50,7 +51,7 @@
   padding-top: 63px;
   padding-bottom: 63px;
 
-  @include color($title--lite);
+  color: $title--lite;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
 }
@@ -74,12 +75,12 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  @include color($title--dark);
+  color: $title--dark;
 }
 
 .work--catalog-text {
   font-size: 16px;
   line-height: 1.88;
   margin-top: 4px;
-  @include color($text--dark);
+  color: $text--dark;
 }

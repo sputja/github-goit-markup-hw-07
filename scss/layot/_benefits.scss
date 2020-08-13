@@ -8,7 +8,7 @@
   font-size: 36px;
   line-height: 1.67;
   text-align: center;
-  @include color($title--dark);
+  color: $title--dark;
 }
 
 .about--list {
