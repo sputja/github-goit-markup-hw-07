@@ -18,18 +18,18 @@
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
-}
 
-.work--catalog-item:hover,
-.work--catalog-item:focus {
-  box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16),
-    0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-  background: $text--light;
-  overflow: hidden;
-}
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    background: $text--light;
+    overflow: hidden;
+  }
 
-.work--catalog-item:nth-child(3n + 3) {
-  margin-right: 0;
+  &:nth-child(3n + 3) {
+    margin-right: 0;
+  }
 }
 
 .work--catalog-layer {
@@ -71,10 +71,11 @@
 }
 
 .work--catalog-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  @include styles--font(18px, 2);
+  // font-weight: 700;
+  // font-size: 18px;
+  // line-height: 2;
+  // letter-spacing: 0.06em;
   color: $title--dark;
 }
 

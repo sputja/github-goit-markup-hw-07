@@ -338,13 +338,23 @@ template {
   display: none;
 }
 
-.form--send, .user--form-label, .nav {
+.coordinates--item .logotip, .coordinates--item .address {
+  margin: 0;
+  padding: 0;
+}
+
+.container, .user--form-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form--send, .user--form-label, .nav, .nav--link1, .command--soshial, .portfolio .btn--list, .coordinates--buttom {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.user--form {
+.user--form, .customers--list {
   display: flex;
   align-items: center;
 }
@@ -384,19 +394,16 @@ a {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .button {
   width: 200px;
   height: 50px;
   margin-top: 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
   font-size: 16px;
   line-height: 0.53;
   letter-spacing: 0.06em;
+  font-weight: 700;
   color: #ffffff;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -442,8 +449,7 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.btn--modal-close:hover,
-.btn--modal-close:focus {
+.btn--modal-close:hover, .btn--modal-close:focus {
   color: #2196f3;
   fill: #2196f3;
 }
@@ -453,7 +459,6 @@ a {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.03em;
   margin-top: 2px;
   margin-bottom: 30px;
   color: #212121;
@@ -601,8 +606,6 @@ a {
 
 .user--form-btn {
   width: 200px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   padding-top: 10px;
@@ -619,9 +622,10 @@ a {
 /* Шапка и Логотип компании */
 .logotip {
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  letter-spacing: none;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -642,24 +646,17 @@ a {
 .nav--link,
 .nav--link1 {
   display: block;
-  font-weight: 500;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  font-weight: 500;
   padding-top: 32px;
   padding-bottom: 32px;
   color: #757575;
 }
 
-.nav--link1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav--link:hover,
-.nav--link:focus,
-.nav--link1:hover,
-.nav--link1:focus {
+.nav--link1 .nav--link:hover,
+.nav--link1 .nav--link:focus, .nav--link1:hover, .nav--link1:focus {
   color: #2196f3;
 }
 
@@ -713,10 +710,10 @@ a {
 }
 
 .title--h1 {
-  font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.06;
+  font-weight: 900;
   text-transform: uppercase;
   margin: 0;
   color: #ffffff;
@@ -762,7 +759,6 @@ a {
 
 .about--title {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.36;
   margin-top: 30px;
 }
@@ -804,7 +800,7 @@ a {
   right: 0;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   text-align: center;
   padding-top: 27px;
   padding-bottom: 27px;
@@ -859,17 +855,13 @@ a {
 .command--text {
   font-size: 16px;
   line-height: 1.19;
-  font-weight: 400;
   margin-top: 10px;
   text-align: center;
   color: #757575;
 }
 
 .command--soshial {
-  display: flex;
   margin-top: 16px;
-  align-items: center;
-  justify-content: center;
 }
 
 .command--soshial-item {
@@ -896,8 +888,7 @@ a {
   cursor: pointer;
 }
 
-.command--soshial-link:hover,
-.command--soshial-link:focus {
+.command--soshial-link:hover, .command--soshial-link:focus {
   background-color: #2196f3;
 }
 
@@ -912,9 +903,7 @@ a {
 }
 
 .customers--list {
-  display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .customers--item {
@@ -940,8 +929,7 @@ a {
 }
 
 .customers--link:hover,
-.customers--link:hover .customers--svg,
-.customers--link:focus,
+.customers--link:hover .customers--svg, .customers--link:focus,
 .customers--link:focus .customers--svg {
   fill: #2196f3;
   border-color: #2196f3;
@@ -949,12 +937,6 @@ a {
 
 .container .portfolio {
   margin-top: 93px;
-}
-
-.portfolio .btn--list {
-  display: flex;
-  text-align: center;
-  justify-content: center;
 }
 
 .portfolio .btn--item {
@@ -969,10 +951,10 @@ a {
   display: inline-block;
   height: 38px;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
   font-size: 16px;
-  line-height: 1.62px;
-  letter-spacing: 0.03em;
+  line-height: 1.62;
+  letter-spacing: 0.03;
+  font-weight: 500;
   border-color: #f5f4fa;
   border-style: none;
   border-radius: 4px;
@@ -984,8 +966,7 @@ a {
   padding-right: 14px;
 }
 
-.portfolio .btn--text:hover,
-.portfolio .btn--text:focus {
+.portfolio .btn--text:hover, .portfolio .btn--text:focus {
   color: #ffffff;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
   background-color: #2196f3;
@@ -1015,8 +996,7 @@ a {
   box-sizing: border-box;
 }
 
-.work--catalog-item:hover,
-.work--catalog-item:focus {
+.work--catalog-item:hover, .work--catalog-item:focus {
   box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
   background: #ffffff;
   overflow: hidden;
@@ -1064,10 +1044,10 @@ a {
 }
 
 .work--catalog-title {
-  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  font-weight: 700;
   color: #212121;
 }
 
@@ -1096,14 +1076,10 @@ a {
 }
 
 .coordinates--item .logotip {
-  margin: 0;
-  padding: 0;
   color: #ffffff;
 }
 
 .coordinates--item .address {
-  margin: 0;
-  padding: 0;
   padding-top: 20px;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
@@ -1181,16 +1157,13 @@ input {
 }
 
 .coordinates--buttom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 200px;
   height: 50px;
   margin-left: 12px;
-  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  font-weight: 700;
   color: #ffffff;
   background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

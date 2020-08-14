@@ -2,68 +2,68 @@
 .nav--list {
   display: flex;
   margin-left: 85px;
-}
 
-.nav--list .nav--item + .nav--item {
+& .nav--item + .nav--item {
   margin-left: 50px;
 }
-
+}
 .nav--link,
 .nav--link1 {
   display: block;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include styles--font(14px, 1.14, 0.02em, 500);
+  // font-weight: 500;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
   color: $text--dark;
 }
 
 .nav--link1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  @extend %flex--alignment;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
 .nav--link:hover,
 .nav--link:focus,
-.nav--link1:hover,
-.nav--link1:focus {
+&:hover,
+&:focus {
   color: $accent--color;
 }
 
-.nav--link1:hover .nav--item1-svg,
-.nav--link1:focus .nav--item1-svg {
+&:hover .nav--item1-svg,
+&:focus .nav--item1-svg {
   fill: $accent--color;
   color: $accent--color;
+}
 }
 
 .nav--link-active {
   color: $accent--color;
   padding-bottom: 0px;
-}
 
-.nav--link-active::after {
-  content: "";
-  display: block;
-  width: auto;
-  height: 4px;
-  margin-top: 28px;
-  background: $accent--color;
-  border-radius: 2px;
+  &::after {
+    content: "";
+    display: block;
+    width: auto;
+    height: 4px;
+    margin-top: 28px;
+    background: $accent--color;
+    border-radius: 2px;
+  }
 }
-
 .nav--contact {
   display: flex;
   margin-left: auto;
-}
 
-.nav--contact .nav--item1 + .nav--item1 {
-  margin-left: 30px;
-}
+  & .nav--item1 + .nav--item1 {
+    margin-left: 30px;
+  }
 
-.nav--contact .nav--item1 + .nav--item1:nth-child(3) {
-  margin-left: 30px;
+  & .nav--item1 + .nav--item1:nth-child(3) {
+    margin-left: 30px;
+  }
 }
 
 .nav--item1-svg {

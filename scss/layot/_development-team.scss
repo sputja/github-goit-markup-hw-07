@@ -44,28 +44,28 @@
 .command--text {
   font-size: 16px;
   line-height: 1.19;
-  font-weight: 400;
+  // font-weight: 400;
   margin-top: 10px;
   text-align: center;
   color: $text--dark;
 }
 
 .command--soshial {
-  display: flex;
+  @extend %flex--alignment;
   margin-top: 16px;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .command--soshial-item {
   margin-left: 10px;
   background: #ffffff;
-}
 
-.command--soshial-item:first-child {
+&:first-child {
   margin-left: 0px;
 }
-
+}
 .command--soshial-svg {
   width: 20px;
   height: 20px;
@@ -78,14 +78,14 @@
   padding: 12px;
   border-radius: 50%;
   cursor: pointer;
-}
 
-.command--soshial-link:hover,
-.command--soshial-link:focus {
+&:hover,
+&:focus {
   background-color: $accent--color;
 }
 
-.command--soshial-link:hover .command--soshial-svg,
-.command--soshial-link:focus .command--soshial-svg {
+&:hover .command--soshial-svg,
+&:focus .command--soshial-svg {
   fill: #ffffff;
+}
 }
