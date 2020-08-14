@@ -380,45 +380,50 @@
 		</div>
 	</footer>
 <!--  модальное окно  -->
-<div data-modal class="form--send is-hidden animation">
-  <form class="user--form" action="#">
+<div data-modal class="backdrop is-hidden animation">
+  <form class="modal--form" action="#">
     <button data-modal-close type="button" class="btn--modal-close animation">
-      <svg class="form--send-svg animation" width="11" height="11" >
+      <svg class="backdrop-svg animation" width="11" height="11" >
         <use href="./img/sprite.svg#close"></use>
       </svg>
       </button>
-    <h2 class="user--form-h2">Оставьте свои данные, мы вам перезвоним</h2>
-    <div class="user--form-name">
-      <input type="text" name="user--name" class="user--form-inptu animation" id="user--name" placeholder=" " required>
-      <svg class="user--name-svg animation" width="12" height="12" >
-        <use href="./img/sprite.svg#fname"></use>
-      </svg>
-      <label class="user--name-label animation" for="user--name">Имя</label>
-    </div>
-    <div class="user--form-tel">
-      <input type="tel" name="user--tel" class="user--form-inptu animation" id="user--tel" placeholder=" " required>
-      <svg class="user--tel-svg animation" width="13" height="13" >
-        <use href="./img/sprite.svg#ftel"></use>
-      </svg>
-      <label class="user--tel-label animation" for="user--tel">Телефон</label>
-    </div>
-    <div class="user--form-email">
-      <input type="email" name="user--email" class="user--form-inptu animation" id="user--email" placeholder=" " required>
-      <svg class="user--email-svg animation" width="13" height="13" >
-        <use href="./img/sprite.svg#femail"></use>
-      </svg>
-      <label class="user--email-label animation" for="user--email">Почта</label>
-    </div>
-    <textarea name="text" class="user--form-textarea animation" placeholder="Комментарий"></textarea>
-    <label class="user--form-label animation">
-      <input type="checkbox" name="polisy" value="accept-polisy" class="user--form-hidden  user--checkbox animation">
-      <span class="user--form-label--checkbox"></span>
-      <svg class="user--form-label--svg animation" width="11" height="8" >
-        <use href="./img/sprite.svg#checkgal"></use>
-      </svg>
-      <span class="user--form-label--span">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></span>
-    </label>
-    <button type="submit" class="user--form-btn">Отправить</button>
+    <h2 class="modal--form-h2">Оставьте свои данные, мы вам перезвоним</h2>
+    <ul class="modal--fomr-list" >
+      <li class="modal--form-item">
+        <input type="text" name="user--name" class="modal--form-inptu animation" id="user--name" placeholder=" " required>
+        <svg class="user--name-svg animation" width="12" height="12" >
+          <use href="./img/sprite.svg#fname"></use>
+        </svg>
+        <label class="user--name-label animation" for="user--name">Имя</label>
+      </li>
+      <li class="modal--form-item">
+        <input type="tel" name="user--tel" class="modal--form-inptu animation" id="user--tel" placeholder=" " required>
+        <svg class="user--tel-svg animation" width="13" height="13" >
+          <use href="./img/sprite.svg#ftel"></use>
+        </svg>
+        <label class="user--tel-label animation" for="user--tel">Телефон</label>
+      </li>
+      <li class="modal--form-item">
+        <input type="email" name="user--email" class="modal--form-inptu animation" id="user--email" placeholder=" " required>
+        <svg class="user--email-svg animation" width="13" height="13" >
+          <use href="./img/sprite.svg#femail"></use>
+        </svg>
+        <label class="user--email-label animation" for="user--email">Почта</label>
+      </li>
+      <li class="modal--form-item">
+          <textarea name="text" class="modal--form-textarea animation" placeholder=" "></textarea>
+          <label class="modal--form-label animation" id="text" >Комментарий</label>
+      </li>
+      <li class="modal--form-item">
+        <input type="checkbox" name="polisy" value="accept-polisy" placeholder=" " class="modal--form-hidden   animation">
+        <span class="modal--form-label--checkbox"></span>
+        <svg class="modal--form-label--svg animation" width="11" height="8" >
+          <use href="./img/sprite.svg#checkgal"></use>
+        </svg>
+        <label class="modal--form-label--polisy id="polisy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+      </li>
+    </ul>
+    <button type="submit" class="modal--form-btn">Отправить</button>
   </form>
 </div>
 <script src="./js/modal.js"></script>

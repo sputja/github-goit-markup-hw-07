@@ -343,18 +343,18 @@ template {
   padding: 0;
 }
 
-.container, .user--form-btn {
+.container, .modal--form-btn {
   margin-left: auto;
   margin-right: auto;
 }
 
-.form--send, .user--form-label, .coordinates--buttom, .portfolio .btn--list, .nav, .nav--link1, .command--soshial {
+.backdrop, .modal--form-label, .coordinates--buttom, .portfolio .btn--list, .nav, .nav--link1, .command--soshial {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.user--form, .customers--list {
+.customers--list {
   display: flex;
   align-items: center;
 }
@@ -412,7 +412,7 @@ a {
 }
 
 /* модальное окно */
-.form--send {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -422,12 +422,174 @@ a {
   z-index: 100;
 }
 
-.user--form {
+.modal--form {
   position: relative;
   width: 528px;
-  flex-direction: column;
+  text-align: center;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal--form-h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 30px;
+  color: #212121;
+}
+
+.modal--form-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.modal--form-inptu {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-text-fill-color: #212121;
+  color: #212121;
+  background-color: #ffffff;
+}
+
+.modal--form-inptu:hover, .modal--form-inptu:focus {
+  border: 1px solid #2196f3;
+  fill: #2196f3;
+}
+
+.modal--form-inptu:hover + .user--name-svg,
+.modal--form-inptu:focus + .user--name-svg,
+.modal--form-inptu:hover + .user--tel-svg,
+.modal--form-inptu:focus + .user--tel-svg,
+.modal--form-inptu:hover + .user--email-svg,
+.modal--form-inptu:focus + .user--email-svg {
+  fill: #2196f3;
+}
+
+.modal--form-inptu:hover + .user--name-svg + .user--name-label,
+.modal--form-inptu:focus + .user--name-svg + .user--name-label,
+.modal--form-inptu:hover + .user--tel-svg + .user--tel-label,
+.modal--form-inptu:focus + .user--tel-svg + .user--tel-label,
+.modal--form-inptu:hover + .user--email-svg + .user--email-label,
+.modal--form-inptu:focus + .user--email-svg + .user--email-label,
+.modal--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
+.modal--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
+.modal--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
+.modal--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
+.modal--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--email-label,
+.modal--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--email-label {
+  margin-top: -33px;
+  margin-left: 0;
+  color: #2196f3;
+}
+
+.user--name-svg {
+  position: absolute;
+  top: 14px;
+  left: 56px;
+  fill: #212121;
+}
+
+.user--tel-svg,
+.user--email-svg {
+  position: absolute;
+  top: 11px;
+  left: 56px;
+}
+
+.user--name-label {
+  position: absolute;
+  top: 14px;
+  left: 56px;
+  margin-left: 25px;
+}
+
+.user--tel-label,
+.user--email-label {
+  position: absolute;
+  top: 11px;
+  left: 56px;
+  margin-left: 25px;
+}
+
+.modal--form-textarea {
+  width: 448px;
+  height: 120px;
+  outline: none;
+  resize: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #212121;
+  background-color: #ffffff;
+}
+
+.modal--form-textarea:hover {
+  border: 1px solid #2196f3;
+}
+
+.modal--form-label {
+  position: absolute;
+  top: 10px;
+  left: 56px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.modal--form-textarea:hover + .modal--form-label,
+.modal--form-textarea:focus + .modal--form-label,
+.modal--form-textarea:not(:placeholder-shown) + .modal--form-label {
+  margin-top: -38px;
+  color: #2196f3;
+}
+
+.modal--form-label--checkbox {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 20px;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid #212121;
+}
+
+.modal--form-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal--form-hidden:hover + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+.modal--form-hidden:focus + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+.modal--form-hidden:checked + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+.modal--form-hidden:hover + .modal--form-label--svg,
+.modal--form-hidden:focus + .modal--form-label--svg,
+.modal--form-hidden:checked + .modal--form-label--svg {
+  border: 0.2px solid #ffffff;
+  background-color: #2196f3;
+}
+
+.modal--form-label--svg {
+  position: absolute;
+  top: 24px;
+  left: 53px;
 }
 
 .is-hidden {
@@ -454,157 +616,7 @@ a {
   fill: #2196f3;
 }
 
-.user--form-h2 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  margin-top: 2px;
-  margin-bottom: 30px;
-  color: #212121;
-}
-
-.user--form-name,
-.user--form-tel,
-.user--form-email {
-  position: relative;
-  margin-bottom: 28px;
-}
-
-.user--form-inptu {
-  width: 448px;
-  height: 40px;
-  padding-left: 42px;
-  outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  -webkit-text-fill-color: #212121;
-  color: #212121;
-  background-color: #ffffff;
-}
-
-.user--form-inptu:hover, .user--form-inptu:focus {
-  border: 1px solid #2196f3;
-  fill: #2196f3;
-}
-
-.user--form-inptu:hover + .user--name-svg,
-.user--form-inptu:focus + .user--name-svg,
-.user--form-inptu:hover + .user--tel-svg,
-.user--form-inptu:focus + .user--tel-svg,
-.user--form-inptu:hover + .user--email-svg,
-.user--form-inptu:focus + .user--email-svg {
-  fill: #2196f3;
-}
-
-.user--form-inptu:hover + .user--name-svg + .user--name-label,
-.user--form-inptu:focus + .user--name-svg + .user--name-label,
-.user--form-inptu:hover + .user--tel-svg + .user--tel-label,
-.user--form-inptu:focus + .user--tel-svg + .user--tel-label,
-.user--form-inptu:hover + .user--email-svg + .user--email-label,
-.user--form-inptu:focus + .user--email-svg + .user--email-label,
-.user--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-.user--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-.user--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-.user--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-.user--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--email-label,
-.user--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--email-label {
-  margin-top: -33px;
-  margin-left: 0;
-  color: #2196f3;
-}
-
-.user--name-svg {
-  position: absolute;
-  top: 14px;
-  left: 16px;
-  fill: #212121;
-}
-
-.user--tel-svg,
-.user--email-svg {
-  position: absolute;
-  top: 11px;
-  left: 16px;
-}
-
-.user--name-label {
-  position: absolute;
-  top: 14px;
-  left: 16px;
-  margin-left: 25px;
-}
-
-.user--tel-label,
-.user--email-label {
-  position: absolute;
-  top: 11px;
-  left: 16px;
-  margin-left: 25px;
-}
-
-.user--form-textarea {
-  width: 448px;
-  height: 120px;
-  outline: none;
-  resize: none;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  color: #212121;
-  background-color: #ffffff;
-}
-
-.user--form-textarea:hover {
-  border: 1px solid #2196f3;
-}
-
-.user--form-label {
-  position: relative;
-  margin-top: 30px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
-}
-
-.user--form-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.user--form-hidden:checked + .user--form-label--checkbox {
-  border: 0.2px solid #ffffff;
-  background-color: #2196f3;
-}
-
-.user--form-label--checkbox {
-  display: inline-block;
-  margin-right: 8px;
-  width: 16px;
-  height: 15px;
-  border-radius: 2px;
-  border: 2px solid #212121;
-}
-
-.user--form-label--svg {
-  position: absolute;
-  top: 8px;
-  left: 2px;
-}
-
-.user--form-btn {
+.modal--form-btn {
   width: 200px;
   margin-top: 40px;
   margin-bottom: 40px;

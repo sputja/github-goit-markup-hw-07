@@ -1,75 +1,41 @@
 /* модальное окно */
-// .backdrop,
-.form--send {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   @extend %flex--alignment;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
-// .modal-form,
-.user--form {
+.modal--form {
   position: relative;
   width: 528px;
-  // display: flex;
-  // text-align: center;
-  @extend %flex--align-items;
-  flex-direction: column;
+  text-align: center;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
 
-.btn--modal-close {
-  display: inline-block;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  margin-left: 490px;
-  margin-top: 8px;
-  margin-right: 8px;
-
-  border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-&:hover,
-&:focus {
-  color: $accent--color;
-  fill: $accent--color;
-}
-}
-.user--form-h2 {
+.modal--form-h2 {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   // letter-spacing: 0.03em;
+  text-align: center;
   margin-top: 2px;
   margin-bottom: 30px;
   color: $title--dark;
 }
 
-.user--form-name,
-.user--form-tel,
-.user--form-email {
+.modal--form-item {
   position: relative;
   margin-bottom: 28px;
 }
 
-.user--form-inptu {
+.modal--form-inptu {
   width: 448px;
   height: 40px;
   padding-left: 42px;
@@ -80,49 +46,44 @@
   -webkit-text-fill-color: $title--dark;
   color: $title--dark;
   background-color: #ffffff;
-// }
 
-&:hover,
-&:focus {
-  border: 1px solid $accent--color;
-  fill: $accent--color;
-}
+  &:hover,
+  &:focus {
+    border: 1px solid $accent--color;
+    fill: $accent--color;
+  }
 
-&:hover + .user--name-svg,
-&:focus + .user--name-svg,
-&:hover + .user--tel-svg,
-&:focus + .user--tel-svg,
-&:hover + .user--email-svg,
-&:focus + .user--email-svg {
-  fill: $accent--color;
-}
+  &:hover + .user--name-svg,
+  &:focus + .user--name-svg,
+  &:hover + .user--tel-svg,
+  &:focus + .user--tel-svg,
+  &:hover + .user--email-svg,
+  &:focus + .user--email-svg {
+    fill: $accent--color;
+  }
 
-&:hover + .user--name-svg + .user--name-label,
-&:focus + .user--name-svg + .user--name-label,
-&:hover + .user--tel-svg + .user--tel-label,
-&:focus + .user--tel-svg + .user--tel-label,
-&:hover + .user--email-svg + .user--email-label,
-&:focus + .user--email-svg + .user--email-label,
-&:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-&:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-&:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-&:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-&:not(:placeholder-shown)
-  + .user--email-svg
-  + .user--email-label,
-&:not(:placeholder-shown)
-  + .user--email-svg
-  + .user--email-label {
-  margin-top: -33px;
-  margin-left: 0;
-  color: $accent--color;
-}
+  &:hover + .user--name-svg + .user--name-label,
+  &:focus + .user--name-svg + .user--name-label,
+  &:hover + .user--tel-svg + .user--tel-label,
+  &:focus + .user--tel-svg + .user--tel-label,
+  &:hover + .user--email-svg + .user--email-label,
+  &:focus + .user--email-svg + .user--email-label,
+  &:not(:placeholder-shown) + .user--name-svg + .user--name-label,
+  &:not(:placeholder-shown) + .user--name-svg + .user--name-label,
+  &:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
+  &:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
+  &:not(:placeholder-shown) + .user--email-svg + .user--email-label,
+  &:not(:placeholder-shown) + .user--email-svg + .user--email-label {
+    margin-top: -33px;
+    margin-left: 0;
+    color: $accent--color;
+  }
 }
 
 .user--name-svg {
   position: absolute;
   top: 14px;
-  left: 16px;
+  left: 56px;
   fill: $btn--dark;
 }
 
@@ -130,13 +91,13 @@
 .user--email-svg {
   position: absolute;
   top: 11px;
-  left: 16px;
+  left: 56px;
 }
 
 .user--name-label {
   position: absolute;
   top: 14px;
-  left: 16px;
+  left: 56px;
   margin-left: 25px;
 }
 
@@ -144,16 +105,15 @@
 .user--email-label {
   position: absolute;
   top: 11px;
-  left: 16px;
+  left: 56px;
   margin-left: 25px;
 }
 
-.user--form-textarea {
+.modal--form-textarea {
   width: 448px;
   height: 120px;
   outline: none;
   resize: none;
-  // margin-left: 40px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
@@ -164,24 +124,39 @@
   color: $title--dark;
   background-color: #ffffff;
 
-&:hover {
-  border: 1px solid $accent--color;
-}
-}
-.user--form-label {
-  position: relative;
-  @extend %flex--alignment;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  margin-top: 30px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $text--dark;
+  &:hover {
+    border: 1px solid $accent--color;
+  }
 }
 
-.user--form-hidden {
+.modal--form-label {
+  position: absolute;
+  top: 10px;
+  left: 56px;
+  @extend %flex--alignment;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.01em;
+  color: $text--dark;
+}
+.modal--form-textarea:hover + .modal--form-label,
+.modal--form-textarea:focus + .modal--form-label,
+.modal--form-textarea:not(:placeholder-shown) + .modal--form-label {
+  margin-top: -38px;
+  color: $accent--color;
+}
+
+.modal--form-label--checkbox {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 20px;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid $btn--dark;
+}
+
+.modal--form-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -191,25 +166,20 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:checked + .user--form-label--checkbox {
+  &:hover + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+  &:focus + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+  &:checked + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+  &:hover + .modal--form-label--svg,
+  &:focus + .modal--form-label--svg,
+  &:checked + .modal--form-label--svg
+  {
     border: 0.2px solid #ffffff;
     background-color: $accent--color;
   }
 }
 
-.user--form-label--checkbox {
-  display: inline-block;
-  margin-right: 8px;
-  width: 16px;
-  height: 15px;
-  border-radius: 2px;
-  border: 2px solid $btn--dark;
-}
-
-
-
-.user--form-label--svg {
+.modal--form-label--svg {
   position: absolute;
-  top: 8px;
-  left: 2px;
+  top: 24px;
+  left: 53px;
 }
