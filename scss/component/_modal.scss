@@ -144,8 +144,8 @@
 .modal--form-textarea:not(:placeholder-shown) + .modal--form-label {
   margin-top: -38px;
   color: $accent--color;
-}
 
+}
 .modal--form-label--checkbox {
   display: inline-block;
   margin-right: 8px;
@@ -166,9 +166,9 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:hover + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
-  &:focus + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
-  &:checked + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+  &:hover + .modal--form-label--polisy,
+  &:focus + .modal--form-label--polisy,
+  &:checked + .modal--form-label--polisy ,
   &:hover + .modal--form-label--svg,
   &:focus + .modal--form-label--svg,
   &:checked + .modal--form-label--svg

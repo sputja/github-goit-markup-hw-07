@@ -576,9 +576,9 @@ a {
   overflow: hidden;
 }
 
-.modal--form-hidden:hover + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
-.modal--form-hidden:focus + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
-.modal--form-hidden:checked + .modal--form-label--checkbox + .modal--form-label--svg + modal--form-label--polisy,
+.modal--form-hidden:hover + .modal--form-label--polisy,
+.modal--form-hidden:focus + .modal--form-label--polisy,
+.modal--form-hidden:checked + .modal--form-label--polisy,
 .modal--form-hidden:hover + .modal--form-label--svg,
 .modal--form-hidden:focus + .modal--form-label--svg,
 .modal--form-hidden:checked + .modal--form-label--svg {
