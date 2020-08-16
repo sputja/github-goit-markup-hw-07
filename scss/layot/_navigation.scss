@@ -1,9 +1,12 @@
+
 /* Панель навигации */
 .nav {
   @extend %flex--alignment;
 }
 
 .nav--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 85px;
 
@@ -60,6 +63,8 @@
   }
 }
 .nav--contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
 

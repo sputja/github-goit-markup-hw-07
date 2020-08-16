@@ -1,21 +1,4 @@
 
-// подумать над оптимизациуй шаблонов например флекс (display: flex; display: inline-flex;) и его переменіе (align-items: center;justify-content: center;text-align: center;
-
-
-// %df{
-//   display: flex;
-// }
-// %di--f{
-//   display: inline-flex;
-// }
-// %db{
-//   display: block;
-// }
-// %di--b{
-//   display: inline-block;
-// }
-
-
 %discharge-m-p {
   margin: 0;
   padding: 0;
@@ -27,20 +10,29 @@
 }
 
 %flex--center{
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 %flex--alignment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   @extend %flex--center;
 }
 
-// @extend %flex--alignment;
 
 %flex--align-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 %input--border-hover {
@@ -77,7 +69,9 @@
 
 %portfolio--btn-text--hover {
   color: $btn--light;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 3px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 3px 1px rgba(0, 0, 0, 0.1);
     background-color: $accent--color;
 }
@@ -118,5 +112,7 @@
 
 %work--catalog-item--hover-work--catalog-style{
   top: 0;
-  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
 }

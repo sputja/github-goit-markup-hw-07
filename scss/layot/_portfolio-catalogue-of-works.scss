@@ -1,11 +1,15 @@
+
 /* Портфолио -Каталог Работ */
 .container .portfolio {
   margin-top: 93px;
 }
 
 .work--catalog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .h2 {
   margin: 0;
@@ -17,11 +21,14 @@
   margin-top: 30px;
   background-color: #ffffff;
   border: 1px solid #eeeeee;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   &:hover,
   &:focus {
-    box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16),
+    -webkit-box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+            box-shadow: 1px 4px 6px rgba(99, 51, 51, 0.16),
       0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
     background: $text--light;
     overflow: hidden;
@@ -49,8 +56,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-
-  // font-family: $main-font;
   font-size: 18px;
   line-height: 1.56;
   padding-left: 24px;
@@ -60,7 +65,9 @@
 
   color: $title--lite;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .work--catalog-link:hover .work--catalog-style {

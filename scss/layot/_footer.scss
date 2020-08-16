@@ -1,6 +1,9 @@
+
 //  Координаты и обратная связь
 .coordinates {
   margin-top: 94px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f303a), to(#2f303a));
+  background-image: -o-linear-gradient(#2f303a, #2f303a);
   background-image: linear-gradient(#2f303a, #2f303a);
   background-repeat: no-repeat;
   background-position: center;
@@ -8,6 +11,8 @@
 }
 
 .coordinates--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -47,6 +52,8 @@
 }
 
 .coordinates--list1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-self: start;
   margin-top: 20px;
@@ -78,6 +85,8 @@
 }
 
 .coordinates--subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
 }
@@ -88,8 +97,10 @@
   font-size: 16px;
   line-height: 1.25px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 

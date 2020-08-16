@@ -5,15 +5,16 @@
 
 .portfolio .btn--list {
   @extend %flex--alignment;
+}
 
 .portfolio .btn--item {
   margin-right: 8px;
+}
 
-  &:last-child {
+.portfolio .btn--item :last-child {
     margin-right: 0;
-  }
 }
-}
+
 .portfolio .btn--text {
   display: inline-block;
   height: 38px;
@@ -29,7 +30,7 @@
   padding-left: 14px;
   padding-right: 14px;
 
-  &:hover{
+  &:hover {
     @extend %portfolio--btn-text--hover;
   }
   &:focus {

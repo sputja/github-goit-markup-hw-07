@@ -21,7 +21,9 @@
   width: 528px;
   text-align: center;
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -54,7 +56,8 @@
   padding-left: 42px;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 4px;
   -webkit-text-fill-color: $title--dark;
   color: $title--dark;
@@ -167,7 +170,8 @@
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 4px;
   color: $title--dark;
   background-color: #ffffff;
@@ -194,7 +198,6 @@
 .user--form-label--checkbox {
   display: inline-block;
   margin-right: 8px;
-  // margin-top: 20px;
   width: 16px;
   height: 15px;
   border-radius: 2px;
@@ -231,6 +234,7 @@
 }
 
 .user--form-a {
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   color: $accent--color;
 }
