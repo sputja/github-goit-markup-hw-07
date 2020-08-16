@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title lang="en">WebStudio</title>
-	<!-- <link rel="stylesheet" href="./css/normalise.css"> -->
 	<link rel="stylesheet" href="./css/main.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -380,8 +379,8 @@
 		</div>
 	</footer>
 <!--  модальное окно  -->
-<div data-modal class="backdrop is-hidden">
-  <form class="modal--form animation" action="#">
+<div data-modal class="backdrop is-hidden animation">
+  <form class="modal--form" action="#">
     <button data-modal-close type="button" class="btn--modal-close animation">
       <svg class="backdrop-svg animation" width="11" height="11" >
         <use href="./img/sprite.svg#close"></use>
@@ -411,14 +410,14 @@
         <label class="user--email-label animation" for="user--email">Почта</label>
       </li>
       <li class="modal--form-item">
-          <textarea name="text" class="user--form-textarea animation" placeholder=" "></textarea>
+          <textarea name="text" id="text" class="user--form-textarea animation" placeholder=" "></textarea>
           <label class="user--form-label animation" for="text" >Комментарий</label>
       </li>
       <li class="modal--form-item">
         <label class="user--form-label--agreement  animation">
-          <input type="checkbox" name="polisy" value="accept-polisy" class="user--input-hidden  animation" required>
-          <span class="user--form-label--checkbox"></span>
-          <svg class="user--form-label--svg animation" width="11" height="8" >
+          <input type="checkbox" name="polisy" value="accept-polisy" class="user--input-hidden" required>
+          <span class="user--form-label--checkbox animation"></span>
+          <svg class="user--form-label--svg " width="11" height="8" >
             <use href="./img/sprite.svg#checkgal"></use>
           </svg>
           <span class="user--form-label--span">Соглашаюсь с рассылкой и принимаю <a class="user--form-a" href="#">Условия договора</a></span>

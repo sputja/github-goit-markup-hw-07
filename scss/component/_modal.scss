@@ -10,6 +10,12 @@
   z-index: 100;
 }
 
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal--form {
   position: relative;
   width: 528px;
@@ -17,7 +23,6 @@
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    transform: scale(0.5), scale(1);
 }
 
 .modal--form-h2 {
