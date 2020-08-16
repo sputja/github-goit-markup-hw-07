@@ -4,8 +4,6 @@
 }
 
 .customers--list {
-  // display: flex;
-  // align-items: center;
   @extend %flex--align-items;
   justify-content: space-evenly;
 }
@@ -20,9 +18,10 @@
 }
 }
 .customers--link {
+  @extend %flex--alignment;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
@@ -30,12 +29,16 @@
   border-radius: 4px;
   fill: #afb1b8;
 
-
-&:hover,
-&:hover .customers--svg,
-&:focus,
+&:hover{
+  @extend %customers--link;
+}
+&:hover .customers--svg{
+  @extend %customers--link;
+}
+&:focus{
+  @extend %customers--link;
+}
 &:focus .customers--svg {
-  fill: $accent--color;
-  border-color: $accent--color;
+  @extend %customers--link;
 }
 }

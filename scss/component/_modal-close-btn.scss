@@ -17,9 +17,10 @@
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-&:hover,
+&:hover{
+  @extend %btn--modal-close--hover;
+}
 &:focus {
-  color: $accent--color;
-  fill: $accent--color;
+  @extend %btn--modal-close--hover;
 }
 }

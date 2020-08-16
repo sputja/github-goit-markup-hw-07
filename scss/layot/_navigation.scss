@@ -1,42 +1,48 @@
 /* Панель навигации */
+.nav {
+  @extend %flex--alignment;
+}
+
 .nav--list {
   display: flex;
   margin-left: 85px;
 
-& .nav--item + .nav--item {
-  margin-left: 50px;
+  & .nav--item + .nav--item {
+    margin-left: 50px;
+  }
 }
-}
-.nav--link,
-.nav--link1 {
+.nav--link {
   display: block;
   @include styles--font(14px, 1.14, 0.02em, 500);
-  // font-weight: 500;
-  // line-height: 1.14;
-  // letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
   color: $text--dark;
+
+  &:hover {
+    @extend %nav--link;
+  }
+  &:focus {
+    @extend %nav--link;
+  }
 }
 
 .nav--link1 {
   @extend %flex--alignment;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  @extend .nav--link;
 
-.nav--link:hover,
-.nav--link:focus,
-&:hover,
-&:focus {
-  color: $accent--color;
-}
+  &:hover {
+    @extend %nav--link;
+  }
+  &:focus {
+    @extend %nav--link;
+  }
 
-&:hover .nav--item1-svg,
-&:focus .nav--item1-svg {
-  fill: $accent--color;
-  color: $accent--color;
-}
+  &:hover .nav--item1-svg {
+    @extend %nav--link1-hover--nav-item1--svg;
+  }
+  &:focus .nav--item1-svg {
+    @extend %nav--link1-hover--nav-item1--svg;
+  }
 }
 
 .nav--link-active {
@@ -44,7 +50,7 @@
   padding-bottom: 0px;
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: auto;
     height: 4px;

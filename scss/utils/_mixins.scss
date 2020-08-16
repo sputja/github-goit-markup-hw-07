@@ -1,3 +1,34 @@
+
+@mixin styles--font(
+  $fs: 16px,
+  $lh: 1.14,
+  $ls: 0.06em,
+  $fw: 700,
+) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
+}
+// @mixin flex(
+//   $ds:@extend %df;
+//   $lh: 1.14,
+//   $ls: 0.06em,
+//   $fw: 700,
+// ) {
+//   font-size: $fs;
+//   line-height: $lh;
+//   letter-spacing: $ls;
+//   font-weight: $fw;
+// }
+// @include styles--font(16px, 1.14, 0.06, 700);
+
+// @each $col in $title, $btn, $text, $accent--color {
+//   .#{$col}-color {
+//     color:#{$col}
+//   }
+// }
+
 // @mixin color($col) {
 //   @if ($col==title) {
 //     color: $title;
@@ -13,24 +44,5 @@
 //     color: $btn--light;
 //   } @else if($col==text--light) {
 //     color: $text--light;
-//   }
-// }
-
-@mixin styles--font(
-  $fs: 16px,
-  $lh: 1.14,
-  $ls: 0.06em,
-  $fw: 700,
-) {
-  font-size: $fs;
-  line-height: $lh;
-  letter-spacing: $ls;
-  font-weight: $fw;
-}
-// @include styles--font(16px, 1.14, 0.06, 700);
-
-// @each $col in $title, $btn, $text, $accent--color {
-//   .#{$col}-color {
-//     color:#{$col}
 //   }
 // }

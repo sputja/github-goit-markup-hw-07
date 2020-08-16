@@ -30,6 +30,13 @@
   &:nth-child(3n + 3) {
     margin-right: 0;
   }
+  &:hover .work--catalog-style{
+    @extend %work--catalog-item--hover-work--catalog-style;
+  }
+  &:focus .work--catalog-style{
+    @extend %work--catalog-item--hover-work--catalog-style;
+  }
+
 }
 
 .work--catalog-layer {
@@ -43,7 +50,7 @@
   width: 100%;
   height: 100%;
 
-  font-family: $main-font;
+  // font-family: $main-font;
   font-size: 18px;
   line-height: 1.56;
   padding-left: 24px;
@@ -56,10 +63,11 @@
   transform: translateY(100%);
 }
 
-.work--catalog-item:hover .work--catalog-style,
+.work--catalog-link:hover .work--catalog-style {
+  @extend %work--catalog-item--hover-work--catalog-style;
+}
 .work--catalog-link:focus .work--catalog-style {
-  top: 0;
-  transform: translateY(0%);
+  @extend %work--catalog-item--hover-work--catalog-style;
 }
 
 .work--catalog-paragraph {
@@ -72,10 +80,6 @@
 
 .work--catalog-title {
   @include styles--font(18px, 2);
-  // font-weight: 700;
-  // font-size: 18px;
-  // line-height: 2;
-  // letter-spacing: 0.06em;
   color: $title--dark;
 }
 

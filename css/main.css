@@ -348,15 +348,95 @@ template {
   margin-right: auto;
 }
 
-.backdrop, .modal--form-label, .coordinates--buttom, .portfolio .btn--list, .nav, .nav--link1, .command--soshial {
-  display: flex;
+.backdrop, .user--form-label--agreement, .user--form-label, .coordinates--buttom, .portfolio .btn--list, .nav, .nav--link1, .command--soshial, .customers--link {
   align-items: center;
   justify-content: center;
+}
+
+.backdrop, .user--form-label--agreement, .user--form-label, .coordinates--buttom, .portfolio .btn--list, .nav, .nav--link1, .command--soshial, .customers--link {
+  display: flex;
 }
 
 .customers--list {
   display: flex;
   align-items: center;
+}
+
+.user--form-inptu:hover, .user--form-inptu:focus {
+  border: 1px solid #2196f3;
+  fill: #2196f3;
+}
+
+.user--form-inptu:hover + .user--name-svg, .user--form-inptu:focus + .user--name-svg, .user--form-inptu:hover + .user--tel-svg, .user--form-inptu:hover + .user--email-svg, .user--form-inptu:focus + .user--tel-svg, .user--form-inptu:focus + .user--email-svg {
+  fill: #2196f3;
+}
+
+.user--form-inptu:hover + .user--name-svg + .user--name-label, .user--form-inptu:focus + .user--name-svg + .user--name-label, .user--form-inptu:hover + .user--tel-svg + .user--tel-label, .user--form-inptu:hover + .user--email-svg + .user--tel-label, .user--form-inptu:hover + .user--tel-svg + .user--email-label, .user--form-inptu:hover + .user--email-svg + .user--email-label, .user--form-inptu:focus + .user--tel-svg + .user--tel-label, .user--form-inptu:focus + .user--email-svg + .user--tel-label, .user--form-inptu:focus + .user--tel-svg + .user--email-label, .user--form-inptu:focus + .user--email-svg + .user--email-label, .user--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label, .user--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label, .user--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--tel-label, .user--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--email-label, .user--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--email-label {
+  margin-top: -23px;
+  margin-left: 0;
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 0.01em;
+  color: #2196f3;
+}
+
+.user--form-textarea:hover + .user--form-label, .user--form-textarea:focus + .user--form-label, .user--form-textarea:not(:placeholder-shown) + .user--form-label {
+  margin-top: -23px;
+  margin-left: 0;
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 0.01em;
+  color: #2196f3;
+}
+
+.btn--modal-close:hover, .btn--modal-close:focus {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.portfolio .btn--text:hover, .portfolio .btn--text:focus {
+  color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+  background-color: #2196f3;
+}
+
+.customers--link:hover, .customers--link:hover .customers--svg, .customers--link:focus, .customers--link:focus .customers--svg {
+  fill: #2196f3;
+  border-color: #2196f3;
+}
+
+.command--soshial-link:hover, .command--soshial-link:focus {
+  background-color: #2196f3;
+}
+
+.command--soshial-link:hover .command--soshial-svg, .command--soshial-link:focus .command--soshial-svg {
+  fill: #ffffff;
+}
+
+.coordinates--item1 .coordinates--text, .coordinates--item2 .coordinates--text {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.14px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.coordinates--list .command--soshial-link:hover, .coordinates--list1 .command--soshial-link:focus {
+  background-color: #2196f3;
+}
+
+.nav--link:hover, .nav--link1:hover, .nav--link:focus, .nav--link1:focus {
+  color: #2196f3;
+}
+
+.nav--link1:hover .nav--item1-svg, .nav--link1:focus .nav--item1-svg {
+  fill: #2196f3;
+  color: #2196f3;
+}
+
+.work--catalog-item:hover .work--catalog-style, .work--catalog-item:focus .work--catalog-style, .work--catalog-link:hover .work--catalog-style, .work--catalog-link:focus .work--catalog-style {
+  top: 0;
+  transform: translateY(0%);
 }
 
 html {
@@ -428,12 +508,14 @@ a {
   text-align: center;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(0.5), scale(1);
 }
 
 .modal--form-h2 {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  letter-spacing: 0.03em;
   text-align: center;
   margin-top: 2px;
   margin-bottom: 30px;
@@ -443,9 +525,16 @@ a {
 .modal--form-item {
   position: relative;
   margin-bottom: 28px;
+  line-height: 1.71;
+  letter-spacing: 0.01em;
+  color: #757575;
 }
 
-.modal--form-inptu {
+.modal--form-item:nth-last-child(-n + 2) {
+  margin-bottom: 20px;
+}
+
+.user--form-inptu {
   width: 448px;
   height: 40px;
   padding-left: 42px;
@@ -458,37 +547,6 @@ a {
   background-color: #ffffff;
 }
 
-.modal--form-inptu:hover, .modal--form-inptu:focus {
-  border: 1px solid #2196f3;
-  fill: #2196f3;
-}
-
-.modal--form-inptu:hover + .user--name-svg,
-.modal--form-inptu:focus + .user--name-svg,
-.modal--form-inptu:hover + .user--tel-svg,
-.modal--form-inptu:focus + .user--tel-svg,
-.modal--form-inptu:hover + .user--email-svg,
-.modal--form-inptu:focus + .user--email-svg {
-  fill: #2196f3;
-}
-
-.modal--form-inptu:hover + .user--name-svg + .user--name-label,
-.modal--form-inptu:focus + .user--name-svg + .user--name-label,
-.modal--form-inptu:hover + .user--tel-svg + .user--tel-label,
-.modal--form-inptu:focus + .user--tel-svg + .user--tel-label,
-.modal--form-inptu:hover + .user--email-svg + .user--email-label,
-.modal--form-inptu:focus + .user--email-svg + .user--email-label,
-.modal--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-.modal--form-inptu:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-.modal--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-.modal--form-inptu:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-.modal--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--email-label,
-.modal--form-inptu:not(:placeholder-shown) + .user--email-svg + .user--email-label {
-  margin-top: -33px;
-  margin-left: 0;
-  color: #2196f3;
-}
-
 .user--name-svg {
   position: absolute;
   top: 14px;
@@ -496,8 +554,7 @@ a {
   fill: #212121;
 }
 
-.user--tel-svg,
-.user--email-svg {
+.user--tel-svg, .user--email-svg {
   position: absolute;
   top: 11px;
   left: 56px;
@@ -505,20 +562,19 @@ a {
 
 .user--name-label {
   position: absolute;
-  top: 14px;
+  top: 9px;
   left: 56px;
   margin-left: 25px;
 }
 
-.user--tel-label,
-.user--email-label {
+.user--tel-label, .user--email-label {
   position: absolute;
-  top: 11px;
+  top: 6px;
   left: 56px;
   margin-left: 25px;
 }
 
-.modal--form-textarea {
+.user--form-textarea {
   width: 448px;
   height: 120px;
   outline: none;
@@ -534,38 +590,26 @@ a {
   background-color: #ffffff;
 }
 
-.modal--form-textarea:hover {
+.user--form-textarea:hover {
   border: 1px solid #2196f3;
 }
 
-.modal--form-label {
-  position: absolute;
-  top: 10px;
-  left: 56px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.01em;
-  color: #757575;
-}
-
-.modal--form-textarea:hover + .modal--form-label,
-.modal--form-textarea:focus + .modal--form-label,
-.modal--form-textarea:not(:placeholder-shown) + .modal--form-label {
-  margin-top: -38px;
-  color: #2196f3;
-}
-
-.modal--form-label--checkbox {
+.user--form-label--checkbox {
   display: inline-block;
   margin-right: 8px;
-  margin-top: 20px;
   width: 16px;
   height: 15px;
   border-radius: 2px;
   border: 2px solid #212121;
 }
 
-.modal--form-hidden {
+.user--form-label {
+  position: absolute;
+  top: 10px;
+  left: 56px;
+}
+
+.user--input-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -576,20 +620,20 @@ a {
   overflow: hidden;
 }
 
-.modal--form-hidden:hover + .modal--form-label--polisy,
-.modal--form-hidden:focus + .modal--form-label--polisy,
-.modal--form-hidden:checked + .modal--form-label--polisy,
-.modal--form-hidden:hover + .modal--form-label--svg,
-.modal--form-hidden:focus + .modal--form-label--svg,
-.modal--form-hidden:checked + .modal--form-label--svg {
+.user--input-hidden:checked + .user--form-label--checkbox {
   border: 0.2px solid #ffffff;
   background-color: #2196f3;
 }
 
-.modal--form-label--svg {
+.user--form-label--svg {
   position: absolute;
-  top: 24px;
-  left: 53px;
+  top: 8px;
+  left: 62px;
+}
+
+.user--form-a {
+  text-decoration-line: underline;
+  color: #2196f3;
 }
 
 .is-hidden {
@@ -611,14 +655,9 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.btn--modal-close:hover, .btn--modal-close:focus {
-  color: #2196f3;
-  fill: #2196f3;
-}
-
 .modal--form-btn {
   width: 200px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -658,11 +697,11 @@ a {
   margin-top: 93px;
 }
 
-.portfolio .btn--item {
+.portfolio .btn--list .portfolio .btn--item {
   margin-right: 8px;
 }
 
-.portfolio .btn--item:last-child {
+.portfolio .btn--list .portfolio .btn--item:last-child {
   margin-right: 0;
 }
 
@@ -683,12 +722,6 @@ a {
   padding-bottom: 6px;
   padding-left: 14px;
   padding-right: 14px;
-}
-
-.portfolio .btn--text:hover, .portfolio .btn--text:focus {
-  color: #ffffff;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
-  background-color: #2196f3;
 }
 
 /* Шапка и Логотип компании */
@@ -715,8 +748,7 @@ a {
   margin-left: 50px;
 }
 
-.nav--link,
-.nav--link1 {
+.nav--link, .nav--link1 {
   display: block;
   font-size: 14px;
   line-height: 1.14;
@@ -727,24 +759,13 @@ a {
   color: #757575;
 }
 
-.nav--link1 .nav--link:hover,
-.nav--link1 .nav--link:focus, .nav--link1:hover, .nav--link1:focus {
-  color: #2196f3;
-}
-
-.nav--link1:hover .nav--item1-svg,
-.nav--link1:focus .nav--item1-svg {
-  fill: #2196f3;
-  color: #2196f3;
-}
-
 .nav--link-active {
   color: #2196f3;
   padding-bottom: 0px;
 }
 
 .nav--link-active::after {
-  content: "";
+  content: '';
   display: block;
   width: auto;
   height: 4px;
@@ -829,17 +850,15 @@ a {
   background-color: #f5f4fa;
 }
 
-.about--title {
+.about--title, .address, .coordinates--text {
   font-weight: 700;
   line-height: 1.36;
   margin-top: 30px;
 }
 
-.about--text,
-.address,
-.coordinates--text {
+.about--text {
   line-height: 1.71;
-  padding-top: 0em;
+  padding-top: 0;
   margin-top: 10px;
 }
 
@@ -871,7 +890,6 @@ a {
   bottom: 0;
   right: 0;
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-align: center;
   padding-top: 27px;
@@ -960,15 +978,6 @@ a {
   cursor: pointer;
 }
 
-.command--soshial-link:hover, .command--soshial-link:focus {
-  background-color: #2196f3;
-}
-
-.command--soshial-link:hover .command--soshial-svg,
-.command--soshial-link:focus .command--soshial-svg {
-  fill: #ffffff;
-}
-
 /* Клиенты компании */
 .container .customers {
   margin-top: 94px;
@@ -990,21 +999,12 @@ a {
 
 .customers--link {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
   fill: #afb1b8;
-}
-
-.customers--link:hover,
-.customers--link:hover .customers--svg, .customers--link:focus,
-.customers--link:focus .customers--svg {
-  fill: #2196f3;
-  border-color: #2196f3;
 }
 
 /* Портфолио -Каталог Работ */
@@ -1052,7 +1052,6 @@ a {
   top: 0;
   width: 100%;
   height: 100%;
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 1.56;
   padding-left: 24px;
@@ -1062,12 +1061,6 @@ a {
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-}
-
-.work--catalog-item:hover .work--catalog-style,
-.work--catalog-link:focus .work--catalog-style {
-  top: 0;
-  transform: translateY(0%);
 }
 
 .work--catalog-paragraph {
@@ -1148,20 +1141,6 @@ a {
 .coordinates--link {
   margin-top: 20px;
   margin-left: 10px;
-}
-
-.coordinates--item1 .coordinates--text,
-.coordinates--item2 .coordinates--text {
-  margin: 0;
-  font-weight: 700;
-  line-height: 1.14px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.coordinates--list .command--soshial-link:hover,
-.coordinates--list1 .command--soshial-link:focus {
-  background-color: #2196f3;
 }
 
 .coordinates--item2 {

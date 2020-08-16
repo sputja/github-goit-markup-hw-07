@@ -17,13 +17,14 @@
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: scale(0.5), scale(1);
 }
 
 .modal--form-h2 {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  // letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
   text-align: center;
   margin-top: 2px;
   margin-bottom: 30px;
@@ -33,9 +34,16 @@
 .modal--form-item {
   position: relative;
   margin-bottom: 28px;
+  line-height: 1.71;
+  letter-spacing: 0.01em;
+  color: $text--dark;
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 20px;
+  }
 }
 
-.modal--form-inptu {
+.user--form-inptu {
   width: 448px;
   height: 40px;
   padding-left: 42px;
@@ -47,36 +55,67 @@
   color: $title--dark;
   background-color: #ffffff;
 
-  &:hover,
+  &:hover {
+    @extend %input--border-hover;
+  }
   &:focus {
-    border: 1px solid $accent--color;
-    fill: $accent--color;
+    @extend %input--border-hover;
   }
 
-  &:hover + .user--name-svg,
-  &:focus + .user--name-svg,
-  &:hover + .user--tel-svg,
-  &:focus + .user--tel-svg,
-  &:hover + .user--email-svg,
+  &:hover + .user--name-svg {
+    @extend %input--border-hover--svg;
+  }
+  &:focus + .user--name-svg {
+    @extend %input--border-hover--svg;
+  }
+  &:hover + .user--tel-svg {
+    @extend %input--border-hover--svg;
+  }
+  &:focus + .user--tel-svg {
+    @extend %input--border-hover--svg;
+  }
+  &:hover + .user--email-svg {
+    @extend %input--border-hover--svg;
+  }
   &:focus + .user--email-svg {
-    fill: $accent--color;
+    @extend %input--border-hover--svg;
   }
 
-  &:hover + .user--name-svg + .user--name-label,
-  &:focus + .user--name-svg + .user--name-label,
-  &:hover + .user--tel-svg + .user--tel-label,
-  &:focus + .user--tel-svg + .user--tel-label,
-  &:hover + .user--email-svg + .user--email-label,
-  &:focus + .user--email-svg + .user--email-label,
-  &:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-  &:not(:placeholder-shown) + .user--name-svg + .user--name-label,
-  &:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-  &:not(:placeholder-shown) + .user--tel-svg + .user--tel-label,
-  &:not(:placeholder-shown) + .user--email-svg + .user--email-label,
+  &:hover + .user--name-svg + .user--name-label {
+    @extend %input-hover;
+  }
+  &:focus + .user--name-svg + .user--name-label {
+    @extend %input-hover;
+  }
+  &:hover + .user--tel-svg + .user--tel-label {
+    @extend %input-hover;
+  }
+  &:focus + .user--tel-svg + .user--tel-label {
+    @extend %input-hover;
+  }
+  &:hover + .user--email-svg + .user--email-label {
+    @extend %input-hover;
+  }
+  &:focus + .user--email-svg + .user--email-label {
+    @extend %input-hover;
+  }
+  &:not(:placeholder-shown) + .user--name-svg + .user--name-label {
+    @extend %input-hover;
+  }
+  &:not(:placeholder-shown) + .user--name-svg + .user--name-label {
+    @extend %input-hover;
+  }
+  &:not(:placeholder-shown) + .user--tel-svg + .user--tel-label {
+    @extend %input-hover;
+  }
+  &:not(:placeholder-shown) + .user--tel-svg + .user--tel-label {
+    @extend %input-hover;
+  }
   &:not(:placeholder-shown) + .user--email-svg + .user--email-label {
-    margin-top: -33px;
-    margin-left: 0;
-    color: $accent--color;
+    @extend %input-hover;
+  }
+  &:not(:placeholder-shown) + .user--email-svg + .user--email-label {
+    @extend %input-hover;
   }
 }
 
@@ -87,29 +126,33 @@
   fill: $btn--dark;
 }
 
-.user--tel-svg,
-.user--email-svg {
+.user--tel-svg {
   position: absolute;
   top: 11px;
   left: 56px;
+}
+.user--email-svg {
+  @extend .user--tel-svg;
 }
 
 .user--name-label {
   position: absolute;
-  top: 14px;
+  top: 9px;
   left: 56px;
   margin-left: 25px;
 }
 
-.user--tel-label,
-.user--email-label {
+.user--tel-label {
   position: absolute;
-  top: 11px;
+  top: 6px;
   left: 56px;
   margin-left: 25px;
 }
+.user--email-label {
+  @extend .user--tel-label;
+}
 
-.modal--form-textarea {
+.user--form-textarea {
   width: 448px;
   height: 120px;
   outline: none;
@@ -127,36 +170,40 @@
   &:hover {
     border: 1px solid $accent--color;
   }
+
+  &:hover + .user--form-label {
+    @extend %textarea-hover;
+  }
+  &:focus + .user--form-label {
+    @extend %textarea-hover;
+  }
+  &:not(:placeholder-shown) + .user--form-label {
+    @extend %textarea-hover;
+  }
 }
 
-.modal--form-label {
-  position: absolute;
-  top: 10px;
-  left: 56px;
+.user--form-label--agreement {
   @extend %flex--alignment;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.01em;
-  color: $text--dark;
 }
-.modal--form-textarea:hover + .modal--form-label,
-.modal--form-textarea:focus + .modal--form-label,
-.modal--form-textarea:not(:placeholder-shown) + .modal--form-label {
-  margin-top: -38px;
-  color: $accent--color;
 
-}
-.modal--form-label--checkbox {
+.user--form-label--checkbox {
   display: inline-block;
   margin-right: 8px;
-  margin-top: 20px;
+  // margin-top: 20px;
   width: 16px;
   height: 15px;
   border-radius: 2px;
   border: 2px solid $btn--dark;
 }
 
-.modal--form-hidden {
+.user--form-label {
+  position: absolute;
+  top: 10px;
+  left: 56px;
+  @extend %flex--alignment;
+}
+
+.user--input-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -165,21 +212,20 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-
-  &:hover + .modal--form-label--polisy,
-  &:focus + .modal--form-label--polisy,
-  &:checked + .modal--form-label--polisy ,
-  &:hover + .modal--form-label--svg,
-  &:focus + .modal--form-label--svg,
-  &:checked + .modal--form-label--svg
-  {
-    border: 0.2px solid #ffffff;
-    background-color: $accent--color;
-  }
 }
 
-.modal--form-label--svg {
+.user--input-hidden:checked + .user--form-label--checkbox {
+  border: 0.2px solid #ffffff;
+  background-color: $accent--color;
+}
+
+.user--form-label--svg {
   position: absolute;
-  top: 24px;
-  left: 53px;
+  top: 8px;
+  left: 62px;
+}
+
+.user--form-a {
+  text-decoration-line: underline;
+  color: $accent--color;
 }

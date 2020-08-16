@@ -380,8 +380,8 @@
 		</div>
 	</footer>
 <!--  модальное окно  -->
-<div data-modal class="backdrop is-hidden animation">
-  <form class="modal--form" action="#">
+<div data-modal class="backdrop is-hidden">
+  <form class="modal--form animation" action="#">
     <button data-modal-close type="button" class="btn--modal-close animation">
       <svg class="backdrop-svg animation" width="11" height="11" >
         <use href="./img/sprite.svg#close"></use>
@@ -390,37 +390,39 @@
     <h2 class="modal--form-h2">Оставьте свои данные, мы вам перезвоним</h2>
     <ul class="modal--fomr-list" >
       <li class="modal--form-item">
-        <input type="text" name="user--name" class="modal--form-inptu animation" id="user--name" placeholder=" " required>
+        <input type="text" name="user--name" class="user--form-inptu animation" id="user--name" placeholder=" " required>
         <svg class="user--name-svg animation" width="12" height="12" >
           <use href="./img/sprite.svg#fname"></use>
         </svg>
         <label class="user--name-label animation" for="user--name">Имя</label>
       </li>
       <li class="modal--form-item">
-        <input type="tel" name="user--tel" class="modal--form-inptu animation" id="user--tel" placeholder=" " required>
+        <input type="tel" name="user--tel" class="user--form-inptu animation" id="user--tel" placeholder=" " required>
         <svg class="user--tel-svg animation" width="13" height="13" >
           <use href="./img/sprite.svg#ftel"></use>
         </svg>
         <label class="user--tel-label animation" for="user--tel">Телефон</label>
       </li>
       <li class="modal--form-item">
-        <input type="email" name="user--email" class="modal--form-inptu animation" id="user--email" placeholder=" " required>
+        <input type="email" name="user--email" class="user--form-inptu animation" id="user--email" placeholder=" " required>
         <svg class="user--email-svg animation" width="13" height="13" >
           <use href="./img/sprite.svg#femail"></use>
         </svg>
         <label class="user--email-label animation" for="user--email">Почта</label>
       </li>
       <li class="modal--form-item">
-          <textarea name="text" class="modal--form-textarea animation" placeholder=" "></textarea>
-          <label class="modal--form-label animation" id="text" >Комментарий</label>
+          <textarea name="text" class="user--form-textarea animation" placeholder=" "></textarea>
+          <label class="user--form-label animation" for="text" >Комментарий</label>
       </li>
       <li class="modal--form-item">
-        <input type="checkbox" name="polisy" value="accept-polisy"  class="modal--form-hidden  animation">
-        <span class="modal--form-label--checkbox"></span>
-        <svg class="modal--form-label--svg animation" width="11" height="8" >
-          <use href="./img/sprite.svg#checkgal"></use>
-        </svg>
-        <label class="modal--form-label--polisy id="polisy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+        <label class="user--form-label--agreement  animation">
+          <input type="checkbox" name="polisy" value="accept-polisy" class="user--input-hidden  animation" required>
+          <span class="user--form-label--checkbox"></span>
+          <svg class="user--form-label--svg animation" width="11" height="8" >
+            <use href="./img/sprite.svg#checkgal"></use>
+          </svg>
+          <span class="user--form-label--span">Соглашаюсь с рассылкой и принимаю <a class="user--form-a" href="#">Условия договора</a></span>
+        </label>
       </li>
     </ul>
     <button type="submit" class="modal--form-btn">Отправить</button>

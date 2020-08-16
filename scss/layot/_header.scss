@@ -1,14 +1,8 @@
 /* Шапка и Логотип компании */
-.nav {
-  @extend %flex--alignment;
-}
 
 .logotip {
   font-family: $secondary-font;
   @include styles--font(26px, 1.19, none);
-  // font-weight: 700;
-  // font-size: 26px;
-  // line-height: 1.19;
   color: #000000;
 }
 

@@ -53,9 +53,6 @@
 .command--soshial {
   @extend %flex--alignment;
   margin-top: 16px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
 }
 
 .command--soshial-item {
@@ -79,13 +76,17 @@
   border-radius: 50%;
   cursor: pointer;
 
-&:hover,
+&:hover{
+  @extend %command--soshial-link;
+}
 &:focus {
-  background-color: $accent--color;
+  @extend %command--soshial-link;
 }
 
-&:hover .command--soshial-svg,
+&:hover .command--soshial-svg{
+  @extend %command--soshial-svg;
+}
 &:focus .command--soshial-svg {
-  fill: #ffffff;
+  @extend %command--soshial-svg;
 }
 }

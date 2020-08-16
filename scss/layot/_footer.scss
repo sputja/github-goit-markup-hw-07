@@ -18,15 +18,11 @@
 
 .coordinates--item .logotip {
   @extend %discharge-m-p;
-  // margin: 0;
-  // padding: 0;
   color: $text--light;
 }
 
 .coordinates--item .address {
   @extend %discharge-m-p;
-  // margin: 0;
-  // padding: 0;
   padding-top: 20px;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
@@ -61,18 +57,18 @@
   margin-left: 10px;
 }
 
-.coordinates--item1 .coordinates--text,
+.coordinates--item1 .coordinates--text{
+  @extend %coordinates--item1-coordinates--tex;
+}
 .coordinates--item2 .coordinates--text {
-  margin: 0;
-  font-weight: 700;
-  line-height: 1.14px;
-  text-transform: uppercase;
-  color: $title--lite;
+  @extend %coordinates--item1-coordinates--tex;
 }
 
-.coordinates--list .command--soshial-link:hover,
+.coordinates--list .command--soshial-link:hover{
+  @extend %coordinates--list-command--soshial-link;
+}
 .coordinates--list1 .command--soshial-link:focus {
-  background-color: $accent--color;
+  @extend %coordinates--list-command--soshial-link;
 }
 
 .coordinates--item2 {
@@ -101,5 +97,3 @@ input {
   color: rgba(255, 255, 255, 0.6);
   background: #2f303a;
 }
-
-

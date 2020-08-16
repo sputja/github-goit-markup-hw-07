@@ -1,16 +1,10 @@
 .coordinates--buttom {
   @extend %flex--alignment;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   width: 200px;
   height: 50px;
   margin-left: 12px;
   @include styles--font(16px, 1.88);
-  // font-weight: 700;
-  // font-size: 16px;
-  // line-height: 1.88;
-  // letter-spacing: 0.06em;
+
   color: $btn--light;
   background-color: $accent--color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
