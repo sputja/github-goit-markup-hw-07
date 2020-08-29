@@ -12,6 +12,7 @@
   background-image: linear-gradient(#f5f4fa, #f5f4fa);
   background-repeat: no-repeat;
   background-position: center;
+
   background-size: 1600px auto;
 }
 .container .command {
@@ -19,10 +20,19 @@
 }
 
 .command--list {
+  @media screen and (min-width: 768px){
+    // @extend %flex-aligment;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 94px;
+}
+@media screen and (min-width: 1200px){
+  flex-wrap: nowrap;
+// display: flex;
+// background-color: seagreen;
+}
 }
 
 .command--item {
@@ -34,12 +44,11 @@
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
-}
 
-.command--item:last-child {
+&:last-child {
   padding: 0;
 }
-
+}
 .command--title {
   margin: 0;
   margin-top: 30px;

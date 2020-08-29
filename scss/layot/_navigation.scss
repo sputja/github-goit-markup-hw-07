@@ -1,7 +1,24 @@
 
 /* Панель навигации */
+
 .nav {
   @extend %flex--alignment;
+
+  @media screen and (min-width: 768px){
+    flex-wrap: wrap;
+  }
+}
+
+.nav--item{
+  @media screen and (min-width: 768px){
+    flex-basis: 50%;
+  }
+  @media screen and (min-width: 480px){
+    flex-basis: 100%;
+  }
+  @media screen and (max-width: 1200px){
+    flex-basis: calck(100% / 3);
+  }
 }
 
 .nav--list {

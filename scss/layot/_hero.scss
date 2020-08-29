@@ -1,29 +1,53 @@
 /* Hero  */
 .hero {
+
   height: 600px;
   padding-top: 200px;
   text-align: center;
-  background-image: -webkit-gradient(
+  @media screen and (min-width: 480px){
+    background-image: -webkit-gradient(
       linear,
       left top, left bottom,
       from(rgba(47, 48, 58, 0.8)),
       to(rgba(47, 48, 58, 0.8))
     ),
-    url('../img/head.jpg');
+    url('../img/head1.jpg');
   background-image: -o-linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url('../img/head.jpg');
+    url('../img/head1.jpg');
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url('../img/head.jpg');
+    url('../img/head1.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px auto;
+  background-size: 480px auto;
 }
+  }
+//   background-image: -webkit-gradient(
+//       linear,
+//       left top, left bottom,
+//       from(rgba(47, 48, 58, 0.8)),
+//       to(rgba(47, 48, 58, 0.8))
+//     ),
+//     url('../img/head.jpg');
+//   background-image: -o-linear-gradient(
+//       rgba(47, 48, 58, 0.8),
+//       rgba(47, 48, 58, 0.8)
+//     ),
+//     url('../img/head.jpg');
+//   background-image: linear-gradient(
+//       rgba(47, 48, 58, 0.8),
+//       rgba(47, 48, 58, 0.8)
+//     ),
+//     url('../img/head.jpg');
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 1600px auto;
+// }
 
 .title--h1 {
   @include styles--font(44px, 1.36, 0.06, 900);

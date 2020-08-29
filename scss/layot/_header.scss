@@ -2,9 +2,18 @@
 /* Шапка и Логотип компании */
 
 .logotip {
-  font-family: $secondary-font;
-  @include styles--font(26px, 1.19, none);
-  color: #000000;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    font-family: $secondary-font;
+  @include styles--font(24px, 1.16, 0.03);
+  color: #000000
+  }
+  @media screen and (min-width: 1200px) {
+    font-family: $secondary-font;
+    @include styles--font(26px, 1.19, 0.03);
+  color: #000000
+  }
+
 }
 
 .logotip--text {

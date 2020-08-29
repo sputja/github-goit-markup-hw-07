@@ -1,8 +1,13 @@
-
 //  Координаты и обратная связь
 .coordinates {
-  margin-top: 94px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f303a), to(#2f303a));
+  text-align: center;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#2f303a),
+    to(#2f303a)
+  );
   background-image: -o-linear-gradient(#2f303a, #2f303a);
   background-image: linear-gradient(#2f303a, #2f303a);
   background-repeat: no-repeat;
@@ -10,101 +15,191 @@
   background-size: 1600px auto;
 }
 
-.coordinates--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 767px) {
+  .coordinates .container {
+    max-width: 480px;
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#2f303a),
+      to(#2f303a)
+    );
+    background-image: -o-linear-gradient(#2f303a, #2f303a);
+    background-image: linear-gradient(#2f303a, #2f303a);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1600px auto;
+  }
+  .coordinates--list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .coordinates--item {
+    padding-top: 60px;
+  }
+
+  .coordinates--item .logotip {
+    // @extend %discharge-m-p;
+    color: $text--light;
+  }
+
+  .coordinates--item .address {
+    @extend %discharge-m-p;
+    padding-top: 20px;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .coordinates--item .address--city {
+    color: $text--light;
+  }
+  .coordinates--list .command--soshial-item {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .coordinates--list .command--soshial-svg {
+    fill: #ffffff;
+  }
+
+  .coordinates--item1 {
+    padding-top: 60px;
+  }
+
+  .coordinates--list1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .coordinates--link {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .coordinates--item1 .coordinates--text {
+    @extend %coordinates--item1-coordinates--tex;
+  }
+  .coordinates--item2 .coordinates--text {
+    @extend %coordinates--item1-coordinates--tex;
+  }
+
+  .coordinates--list .command--soshial-link:hover {
+    @extend %coordinates--list-command--soshial-link;
+  }
+  .coordinates--list1 .command--soshial-link:focus {
+    @extend %coordinates--list-command--soshial-link;
+  }
+
+  .coordinates--item2 {
+    // max-width: 450px;
+    padding-top: 60px;
+    flex-wrap: wrap;
+  }
+  .coordinates--form {
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .coordinates--text {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .coordinates--email {
+    height: 50px;
+    width: 354px;
+    font-size: 16px;
+    line-height: 1.25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+  input {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    background: #2f303a;
+  }
+}
+@media screen and (min-width: 768px) {
+  .coordinates .container {
+    width: 768px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .coordinates--list {
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .coordinates--item {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+  }
+  .coordinates--item1 {
+    padding-top: 88px;
+    padding-left: 148px;
+  }
+  .coordinates--item .address {
+    padding-top: 80px;
+  }
+  .coordinates--item1 {
+    padding-top: 88px;
+    padding-left: 178px;
+  }
+  .coordinates--item2 {
+    padding-top: 0px;
+    padding-bottom: 60px;
+  }
+  .coordinates--form {
+    flex-direction: column;
+  }
+  .coordinates--item2 input {
+    margin-top: 0px;
+  }
 }
 
-.coordinates--item {
-  padding-top: 60px;
-  width: 231px;
-}
-
-.coordinates--item .logotip {
-  @extend %discharge-m-p;
-  color: $text--light;
-}
-
-.coordinates--item .address {
-  @extend %discharge-m-p;
-  padding-top: 20px;
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.coordinates--item .address--city {
-  color: $text--light;
-}
-.coordinates--list .command--soshial-item {
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.coordinates--list .command--soshial-svg {
-  fill: #ffffff;
-}
-
-.coordinates--item1 {
-  width: 206px;
-  margin-left: 69px;
-  padding-top: 72px;
-}
-
-.coordinates--list1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-self: start;
-  margin-top: 20px;
-}
-
-.coordinates--link {
-  margin-top: 20px;
-  margin-left: 10px;
-}
-
-.coordinates--item1 .coordinates--text{
-  @extend %coordinates--item1-coordinates--tex;
-}
-.coordinates--item2 .coordinates--text {
-  @extend %coordinates--item1-coordinates--tex;
-}
-
-.coordinates--list .command--soshial-link:hover{
-  @extend %coordinates--list-command--soshial-link;
-}
-.coordinates--list1 .command--soshial-link:focus {
-  @extend %coordinates--list-command--soshial-link;
-}
-
-.coordinates--item2 {
-  width: 570px;
-  margin-left: 94px;
-  padding-top: 72px;
-}
-
-.coordinates--subscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 20px;
-}
-
-.coordinates--email {
-  height: 50px;
-  width: 354px;
-  font-size: 16px;
-  line-height: 1.25px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-input {
-  color: rgba(255, 255, 255, 0.6);
-  background: #2f303a;
+@media screen and (min-width: 1200px) {
+  .coordinates .container {
+    width: 1200px;
+    background-color: teal;
+  }
+  .coordinates--item .address {
+    padding-top: 20px;
+  }
+  .coordinates--item1 {
+    padding-top: 72px;
+    padding-left: 69px;
+  }
+  .coordinates--item2 {
+    width: 570px;
+    margin-top: 0;
+    padding-top: 72px;
+    padding-left: 94px;
+    flex-wrap: nowrap;
+  }
+  .coordinates--form {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
 }

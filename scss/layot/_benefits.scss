@@ -1,7 +1,8 @@
-
 /*Приимущества */
 .container .about {
   margin-top: 94px;
+
+  // background-color: royalblue;
 }
 
 .title--h2 {
@@ -13,28 +14,45 @@
 }
 
 .about--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  @extend %block--alignment;
+  @media screen and (min-width: 768px) {
+    // @extend %flex-aligment;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    // background-color: red;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    // display: flex;
+    // background-color: seagreen;
+  }
 }
 
 .about--item {
-  width: 270px;
-  margin-right: 30px;
-}
+  width: 100%;
+  // margin-right: 30px;
 
-.about--item:last-child {
-  margin-right: 0;
+  @media screen and (min-width: 768px) {
+    flex-basis: 42%;
+    // background-color: red;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: 22%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .about--img-svg {
-  width: 270px;
-  height: 120px;
+  display: block;
+  min-width: 100%;
+  height: auto;
   padding-top: 25px;
   padding-bottom: 25px;
-}
 
-.about--img-svg {
   border-radius: 4px;
   background-color: #f5f4fa;
 }
@@ -45,12 +63,12 @@
   margin-top: 30px;
 }
 
-.about--text{
+.about--text {
   line-height: 1.71;
   padding-top: 0;
   margin-top: 10px;
 }
-.address{
+.address {
   @extend .about--title;
 }
 .coordinates--text {
